@@ -38,7 +38,7 @@ const item2 = new Item({
 });
 
 const item3 = new Item({
-    name: "<-- hit this to delete the item"
+    name: "click the checkbox to remove the item"
 });
 
 const defaultItems = [item1,item2,item3];
@@ -48,10 +48,6 @@ const listSchema = {
     items: [itemsSchema]
 };
 
-// const listSchema = new mongoose.Schema({
-//     name: String,
-//     items: [itemSchema]
-//   });
 
 const List = mongoose.model("List", listSchema);
 
@@ -105,10 +101,7 @@ app.post("/", function(req,res){
         })
     }
 
-    
-
-
- 
+   
 });
 
 app.post("/delete", function(req,res){
@@ -141,7 +134,6 @@ app.post("/delete", function(req,res){
     }
 
    
-
 });
 
 app.get("/:customListName", function(req,res){
@@ -170,10 +162,6 @@ app.get("/:customListName", function(req,res){
 
    
 
-});
-
-app.post("/work" ,function(req,res){
-   
 });
 
 
